@@ -1,0 +1,73 @@
+<!--
+<html ng-app="wikiSearch">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+		<script src="wikiSearch.js"></script>
+		<link rel="stylesheet" href="wikiSearch.css">
+	</head>
+	<body ng-controller="mainCtrl">
+    <h1> In Progress ...</h1>
+		<form ng-submit="search()">
+			<input type="text" ng-model="searchText"  size="30"
+		       placeholder="type a search topic here">
+			<input class="btn-primary" type="submit" value="search">
+		</form>
+	</body>
+</html>
+-->
+<html ng-app="wikiSearch">
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-4 col-xs-offset-4">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Wikipedia-logo-v2-bw.svg/2000px-Wikipedia-logo-v2-bw.svg.png" target="_blank" class="img-circle" alt="wiki logo">
+				<div class="caption">
+					<h3>WikipediA</h3>
+					<p>The Free Encyclopedia</p>
+				</div>
+		</div>
+	</div>
+
+	<div ng-controller="mainCtrl">
+	<div class="row">
+		<div class="col-xs-4 col-xs-offset-4">
+		<form ng-submit="search()">
+			<input id="txtTopic" type="text" ng-model="searchText"  size="30"
+		       placeholder="type a search topic here">
+        <div class="row">
+         <div class="col-xs-12 text-center">
+		    <input id="btnSearch" class="btn btn-primary center-block" type="submit" value="search">
+		    <input id="btnLucky" class="btn btn-primary center-block" type="button" value="feeling lucky">
+          </div>
+          </div>
+		</form>
+		</div>
+	</div>
+	</div>
+  
+ <!--VIEW 2-->
+<div ng-controller="resultsCtrl">
+<div class="row">
+	<div class="col-xs-4 col-xs-offset-4">
+		<input id="btnNew" class="btn btn-primary center-block" type="button" value="New Search">
+	</div>
+  </div>
+	<section class="sectionChild">
+		<div class="row">
+			<div class="col-xs-8">
+				<div class="row">
+					<h4>Title {{res.title}}</h4>
+				</div>
+				<div class="row">
+					<p>Short descr: {{res.extract}} Description Description Description Description Description Description<br>Description Description Description Description Description Description<br>DescriptionDescriptionDescription</p>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Donald_Trump_official_portrait.jpg/40px-Donald_Trump_official_portrait.jpg" target="_blank" class="img-rounded" alt="page pic">
+			</div>
+		</div>
+	</section>
+<!--END OF VIEW 2--> 
+</div>
+</body>
+</html>	
